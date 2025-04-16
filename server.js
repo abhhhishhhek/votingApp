@@ -8,6 +8,10 @@ app.use(bodyParser.json())
 
 const PORT = process.env.PORT || 3000
 
+app.get('/', function (req, res) {
+    res.send('Welcome to voting app')
+})
+
 // Routers
 const userRoutes = require('./routes/userRoutes')
 const candidateRoutes = require('./routes/candidateRoutes')
